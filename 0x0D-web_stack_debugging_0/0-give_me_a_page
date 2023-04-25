@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-#Ensure that curling port 80 return a page that contains Hello Holberton
+#Run Apache in docker
