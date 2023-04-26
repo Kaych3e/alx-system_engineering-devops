@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# Script that return a page that contains the string Hello World!
+
+# Install Nginix
+sudo apt-get -y update
+sudo apt-get install -y nginx
+
+# Configure Nginx
+mkdir /etc/nginx/html
+
+# Create Sample page
+echo "Hello World!" > /etc/nginx/html/index.html
+
+#Create Server blocks
+echo "server {
+        listen 80;
+        listen [::]:80;
+
+        root /etc/nginx/html;
+        index index.html index.htm index.nginx-debian.html;
+
+        server_name _;
+}
+" > /etc/nginx/sites-available/default
+
+#Restart nginx
+nginx -s reload
