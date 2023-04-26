@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+<<<<<<< HEAD
 # Script that return a page that contains the string Hello World!
 
 # Install Nginix
@@ -12,11 +13,28 @@ mkdir /etc/nginx/html
 echo "Hello World!" > /etc/nginx/html/index.html
 
 #Create Server blocks
+=======
+#script that configures a new Ubuntu machine to listen on port 80
+#it must return a page that contains the string Hello World!
+
+#Install Nginx
+sudo apt-get -y update
+sudo apt-get install -y nginx
+
+#Configure Nginx
+mkdir /etc/nginx/html
+
+#Create sample page
+echo "Hello World!" > /etc/nginx/html/index.html
+
+#Create server block files
+>>>>>>> 5db986d6e6228ccc31843d73135fe2616f944a30
 echo "server {
         listen 80;
         listen [::]:80;
 
         root /etc/nginx/html;
+<<<<<<< HEAD
         index index.html index.htm index.nginx-debian.html;
 
         server_name _;
@@ -24,4 +42,12 @@ echo "server {
 " > /etc/nginx/sites-available/default
 
 #Restart nginx
+=======
+	index index.html index.htm index.nginx-debian.html;
+	server_name _;
+}
+" > /etc/nginx/sites-available/default
+
+#Restart Nginx
+>>>>>>> 5db986d6e6228ccc31843d73135fe2616f944a30
 nginx -s reload

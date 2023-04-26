@@ -2,5 +2,6 @@
 #without typing a password
 
 Host *
+Host 54.236.30.103
     IdentityFile ~/.ssh/school
     PasswordAuthentication no
