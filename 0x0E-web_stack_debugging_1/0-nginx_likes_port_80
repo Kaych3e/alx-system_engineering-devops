@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Script for Nginx to listen on port 80 of all the servers active IPv4 IPs
 
-cp -r /etc/nginx/sites-available/default /ect/nginx/sites-enabled/default
+cp -r /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 
 # restart Nginx
 sudo service nginx restart
