@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 # Script that configures Nginx server to redirect to another page
 
+#Install Nginx
+sudo apt-get update
+sudo apt-get install nginx -y
+
+#Create Sample page
+echo "Hello World!" > /var/www/html/index.html
+
+#Config existing server block
 string_for_replacement="server_name _;\n\nlocation\/redirect_me
                         {\n\treturn 301 https:\/\//www.youtube.com;\n}"
-sudo sed -i "s/server_name _;/$string_for_replacement/"
-/etc/nginx/sites-available/default
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-available/default
 
+#Restart Nginx
 service nginx restart
