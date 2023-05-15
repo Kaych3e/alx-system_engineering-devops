@@ -7,8 +7,6 @@
 #   ufw-before-forward
 #
 
-# Don't delete these required lines, otherwise there will be errors
-
 # nat Table rules
 *nat
 :PREROUTING ACCEPT [0:0]
@@ -16,6 +14,7 @@
 -A PREROUTING -p tcp --dport 8080 -j REDIRECT --to-port 80
 COMMIT
 
+# Don't delete these required lines, otherwise there will be errors
 *filter
 :ufw-before-input - [0:0]
 :ufw-before-output - [0:0]
