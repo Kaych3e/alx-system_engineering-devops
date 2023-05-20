@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#Get password from command line. Backup, dump database and compress
+mysqldump -uroot -p"$1" --all-databases > backup.sql
+tar -cvzf "$(date +%d-%m-%Y)".tar.gz backup.sql
