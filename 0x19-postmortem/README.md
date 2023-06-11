@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Postmortem: Outage Incident Report
 > A postmortem is a tool widely used in the tech industry. After any outage, the team(s) in charge of the system will write a summary that has 2 main goals:
 
@@ -13,6 +14,15 @@ And to ensure that the root cause(s) of the outage has been discovered and that 
 ## Issue Summary
 Duration: June 9, 2023, 10:00 AM to June 10, 2023, 2:00 PM (PST)
 Impact: The GadgetHub online shopping service experienced an outage, rendering it inaccessible to users. Users attempting to access the service received error messages and were unable to make purchases. The outage affected 100% of the user base, leading to significant revenue loss.
+=======
+#Postmortem: Outage Incident Report
+
+#Issue Summary:
+Duration: June 9, 2023, 10:00 AM to June 10, 2023, 2:00 PM (PST)
+Impact: The GadgetHub online shopping service experienced an outage, rendering it inaccessible to users. Users attempting to access the service received error messages and were unable to make purchases. The outage affected 100% of the user base, leading to significant revenue loss.
+
+#Timeline:
+>>>>>>> 36f566f5df308dacc2ccfeadaebd69db3fcd0d31
 
 ## Timeline
 Issue Detected: June 9, 2023, 10:00 AM (PST)
@@ -25,8 +35,13 @@ Root Cause and Resolution:
 Root Cause: The outage was caused by a database failure. A critical table in the database became corrupted, resulting in an unresponsive state of the entire system.
 Resolution: The incident response team restored the service by performing a database rollback to a previous stable state. The corrupted table was repaired, and data integrity checks were implemented to prevent similar incidents in the future.
 
+<<<<<<< HEAD
 ## Corrective and Preventative Measures
 * Improvements:
+=======
+#Corrective and Preventative Measures:
+Improvements:
+>>>>>>> 36f566f5df308dacc2ccfeadaebd69db3fcd0d31
 Implement automated database health checks to proactively identify and address potential issues.
 Enhance monitoring capabilities to detect database failures and corruption promptly.
 Regularly test and validate database backups to ensure their reliability for quick recovery.
